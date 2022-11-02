@@ -2,7 +2,7 @@
 import os
 import time
 
-
+# Funciones Globales
 def cuenta_regresiva():
     numero = 3
     print("\nRegresando al menu en: ")
@@ -59,7 +59,7 @@ def menu():
             print("Esa opcion no es correcta")
             back_menu()
 
-
+# Funciones Logicas
 def suma(a,b):
     s = a+b
     return print(f"\n --> El resultado de la suma es: {s}")
@@ -84,7 +84,7 @@ def residuo(a,b):
     m = a%b
     return print(f"\n --> El resultado del residuo es: {m}")
 
-
+# Funcion Main
 def main():
     menu()
     print("Programa finalizado")
