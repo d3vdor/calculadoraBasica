@@ -14,9 +14,11 @@ def menu():
             5. Residuo
             6. Salir
         """)
-        opc = int(input("Seleccione una opcion: "))
+
+        opc = int(input("\tSeleccione una opcion: "))
         n1 = int(input("Digite un valor para el numero 1: "))
         n2 = int(input("Digite un valor para el numero 2: "))
+        
         if opc == 1:
             suma(n1,n2)
         elif opc == 2:
@@ -33,26 +35,29 @@ def menu():
             print("Esa opcion no es correcta")
 
 
+def suma(a,b):
+    s = a+b
+    return print(f"El resultado de la suma es: {s}")
 
 
-def suma():
-    pass
+def resta(a,b):
+    r = a-b
+    return print(f"El resultado de la resta es: {r}")
 
 
-def resta():
-    pass
+def producto(a,b):
+    p = a*b
+    return print(f"El resultado de la multiplicacion es {p}")
 
 
-def producto():
-    pass
+def division(a,b):
+    d = a/b
+    return print(f"El resultado de la division es: {d}")
 
 
-def division():
-    pass
-
-
-def residuo():
-    pass
+def residuo(a,b):
+    m = a%b
+    return print(f"El resultado del residuo es: {m}")
 
 
 def main():
