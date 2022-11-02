@@ -3,6 +3,18 @@ import os
 import time
 
 
+def cuenta_regresiva():
+    numero = 5
+    print("\nRegresando al menu en: ")
+    for i in range(numero):
+        print(numero)
+        time.sleep(1)
+        numero-=1
+        if numero == 0:
+            print(numero)
+            os.system("cls")
+
+
 def menu():
     while True:
         print("""
@@ -37,27 +49,27 @@ def menu():
 
 def suma(a,b):
     s = a+b
-    return print(f"El resultado de la suma es: {s}")
+    return print(f"\n --> El resultado de la suma es: {s}")
 
 
 def resta(a,b):
     r = a-b
-    return print(f"El resultado de la resta es: {r}")
+    return print(f"\n --> El resultado de la resta es: {r}")
 
 
 def producto(a,b):
     p = a*b
-    return print(f"El resultado de la multiplicacion es {p}")
+    return print(f"\n --> El resultado de la multiplicacion es {p}")
 
 
 def division(a,b):
     d = a/b
-    return print(f"El resultado de la division es: {d}")
+    return print(f"\n --> El resultado de la division es: {d}")
 
 
 def residuo(a,b):
     m = a%b
-    return print(f"El resultado del residuo es: {m}")
+    return print(f"\n --> El resultado del residuo es: {m}")
 
 
 def main():
