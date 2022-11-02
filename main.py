@@ -4,7 +4,7 @@ import time
 
 
 def cuenta_regresiva():
-    numero = 5
+    numero = 3
     print("\nRegresando al menu en: ")
     for i in range(numero):
         print(numero)
@@ -15,8 +15,14 @@ def cuenta_regresiva():
             os.system("cls")
 
 
+def back_menu():
+    time.sleep(1.5)
+    cuenta_regresiva()
+
+
 def menu():
     while True:
+        print("\n")
         print("""
             --- Menu ---
             1. Suma
@@ -26,25 +32,32 @@ def menu():
             5. Residuo
             6. Salir
         """)
-
-        opc = int(input("\tSeleccione una opcion: "))
+        time.sleep(.5)
         n1 = int(input("Digite un valor para el numero 1: "))
         n2 = int(input("Digite un valor para el numero 2: "))
+
+        opc = int(input("\nSeleccione una opcion: "))
         
         if opc == 1:
             suma(n1,n2)
+            back_menu()
         elif opc == 2:
             resta(n1,n2)
+            back_menu()
         elif opc == 3:
             producto(n1,n2)
+            back_menu()
         elif opc == 4:
             division(n1,n2)
+            back_menu()
         elif opc == 5:
             residuo(n1,n2)
+            back_menu()
         elif opc == 6:
             break
         else:
             print("Esa opcion no es correcta")
+            back_menu()
 
 
 def suma(a,b):
